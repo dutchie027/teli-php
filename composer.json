@@ -1,0 +1,26 @@
+{
+    "name": "dutchie027/teli",
+    "description": "Wrapper for Teli API",
+    "keywords": ["php", "automation", "Teli", "paas", "headless", "sms"],
+    "type": "library",
+    "require": {
+        "monolog/monolog": "^2.2",
+        "guzzlehttp/guzzle": "^7.2",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "dutchie027\\Teli\\": "src/"
+        }
+    },
+    "support": {
+        "forum": "https://github.com/dutchie027/teli-php/discussions",
+        "issues": "https://github.com/dutchie027/teli-php/issues",
+        "source": "https://github.com/dutchie027/teli-php/tree/main"
+    },
+    "license": "MIT",
+    "authors": [{
+        "name": "Justin Rodino",
+        "email": "justin@227volts.com"
+    }]
+}
