@@ -279,7 +279,7 @@ class API
                 $ja = json_decode($response->getBody()->getContents(), true);
                 throw new TeliAPIRequestException('An error occurred while performing the request to ' . $url . ' -> ' . (isset($ja['error']) ? $ja['error'] : json_encode($ja)));
             }
-            throw new TeiAPIRequestException(('An unknown error ocurred while performing the request to ' . $url));
+            throw new TeliAPIRequestException(('An unknown error ocurred while performing the request to ' . $url));
         }
     }
 }
