@@ -25,11 +25,26 @@ Why did I create this API versus using the one Teli provides natively? A few rea
 
 ```php
 // require the composer library
-require_once ('vendor/autoload.php');
+require_once 'vendor/autoload.php';
+require_once 'config.php';
 
 //make the connction to the API for use
-$api = new dutchie027\Teli\API(TELI_API_KEY);
+$api = new dutchie027\Teli\API(TELI_API_KEY, TELE_VOICE_KEY);
+
+// Add custom settings
+$api = new dutchie027\Teli\API(TELI_API_KEY, TELE_VOICE_KEY, $settings);
 ```
+
+### Settings
+
+The default settings are fine, however you might want to override the defaults or use your own.**NOTE: All settings are optional and you don't need to provide any**.
+
+| Field       | Type   | Description                                                                                                                                                                                 | Default Value                                                                          |
+| ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `log_dir`   | string | The directory where the log file is stored                                                                                                                                                  | [sys_get_temp_dir()](https://www.php.net/manual/en/function.sys-get-temp-dir.php)      |
+| `log_name`  | string | The name of the log file that is created in `log_dir`. If you don't put .log at the end, it will append it                                                                                  | 6 random characters + [time()](https://www.php.net/manual/en/function.time.php) + .log |
+| `log_tag`   | string | If you share this log file with other applications, this is the tag used in the log file                                                                                                    | vultr                                                                                  |
+| `log_level` | string | The level of logging the application will do. This must be either `debug`, `info`, `notice`, `warning`, `critical` or `error`. If it is not one of those values it will fail to the default | `warning`                                                                              |
 
 ## Future
 
