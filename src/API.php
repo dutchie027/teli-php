@@ -51,6 +51,13 @@ class API
      * @var string
      */
     protected $p_token;
+    
+    /**
+     * API Call Token
+     *
+     * @var string
+     */
+    protected $p_call_token;
 
     /**
      * Log Directory
@@ -104,9 +111,10 @@ class API
     /**
      * Default constructor
      */
-    public function __construct($token, array $attributes = [], Guzzle $guzzle = null)
+    public function __construct($token, $call_token, array $attributes = [], Guzzle $guzzle = null)
     {
         $this->p_token = $token;
+        $this->p_call_token = $call_token;
         if (isset($attributes['log_dir']) && is_dir($attributes['log_dir'])) {
             $this->p_log_location = $attributes['log_dir'];
         } else {
