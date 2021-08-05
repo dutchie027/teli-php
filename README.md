@@ -30,3 +30,8 @@ require_once ('vendor/autoload.php');
 //make the connction to the API for use
 $api = new dutchie027\Teli\API(TELI_API_KEY);
 ```
+
+## Future
+
+- The functions are stubbed out for full feature set of Teli's API, but my main focus ATM is SMS/MMS and Account Management
+
