@@ -29,10 +29,10 @@ require_once 'vendor/autoload.php';
 require_once 'config.php';
 
 //make the connction to the API for use
-$api = new dutchie027\Teli\API(TELI_API_KEY, TELE_VOICE_KEY);
+$api = new dutchie027\Teli\API(TELI_API_KEY, TELI_VOICE_KEY);
 
 // Add custom settings
-$api = new dutchie027\Teli\API(TELI_API_KEY, TELE_VOICE_KEY, $settings);
+$api = new dutchie027\Teli\API(TELI_API_KEY, TELI_VOICE_KEY, $settings);
 ```
 
 ### Settings
