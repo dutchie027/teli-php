@@ -35,3 +35,8 @@ $api = new dutchie027\Teli\API(TELI_API_KEY);
 
 - The functions are stubbed out for full feature set of Teli's API, but my main focus ATM is SMS/MMS and Account Management
 
+
+## Contributing
+
+If you're having problems, spot a bug, or have a feature suggestion, [file an issue](https://github.com/dutchie027/teli-php/issues). If you want, feel free to fork the package and make a pull request. This is a work in progresss as I get more info and further test the API.
+
